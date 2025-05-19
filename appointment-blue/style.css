@@ -6,7 +6,7 @@ Description: A Business theme which is ideal for creating a corporate / business
 Author URI: https://www.webriti.com
 Tags: full-width-template, threaded-comments, two-columns, right-sidebar, left-sidebar, sticky-post, custom-menu, translation-ready, blog, footer-widgets, featured-images
 Template: appointment
-Version: 1.3.8
+Version: 1.3.9
 Requires at least: 4.5
 Tested up to: 6.4
 Requires PHP: 5.4
@@ -247,3 +247,4 @@ Text Domain: appointment-blue
     width: auto;
     z-index: 100000;
 }
+body.wp-child-theme-appointment-blue .navbar3 .ap.header-module #ap-blue-toggle-search{padding-top: 10px;}

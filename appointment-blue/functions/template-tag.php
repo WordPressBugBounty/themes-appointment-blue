@@ -62,11 +62,41 @@ if (!function_exists('appointment_blue_header_center_layout')) :
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <?php
+                $appointment_options = appointment_theme_setup_data();
+                $appointment_header_setting = wp_parse_args(get_option('appointment_options', array()), $appointment_options);
+                if ($appointment_header_setting['appointment_search_enable'] == 0 || $appointment_header_setting['appointment_search_enable'] == '') {
+                $appointment_blue_search_icon = '';
+                $appointment_blue_search_icon.= '<div class="search-bar">
+                    <div class="search-box-outer">
+                      <div class="dropdown" id="ap-blue-toggle-search">
+                        <a href="#" title="'.esc_attr__('Search','appointment-blue').'" class="menu-item search-icon dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                         <i class="fa fa-search"></i>
+                         <span class="sub-arrow"></span>
+                        </a>
+                        <ul class="dropdown-menu pull-right search-panel" role="group" aria-hidden="true" aria-expanded="false">
+                          <li class="dropdown-item panel-outer">
+                            <div class="form-container">
+                                <form method="get" autocomplete="off" class="search-form" action="' . esc_url(home_url('/')) . '">
+                                    <label>
+                                      <input type="search" class="menu-item search-field" placeholder="'.esc_attr__('Search …','appointment-blue').'" value="" name="s">
+                                    </label>
+                                    <input type="submit" class="menu-item search-submit header-toggle-search" value="'.esc_attr__('Search','appointment-blue').'">
+                                </form>                   
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>';
+                }
                 $facebook = $appointment_blue_header_setting['social_media_facebook_link'];
                 $twitter = $appointment_blue_header_setting['social_media_twitter_link'];
                 $linkdin = $appointment_blue_header_setting['social_media_linkedin_link'];
 
                 $social = '<ul id="%1$s" class="%2$s">%3$s';
+                if ($appointment_header_setting['appointment_search_enable'] == 0 || $appointment_header_setting['appointment_search_enable'] == '') {
+                    $social.= '<li><div class="ap header-module">' . $appointment_blue_search_icon . '</li>';
+                    }
                 if ($appointment_blue_header_setting['header_social_media_enabled'] == 0) {
 
                     if($facebook !='' || $twitter!='' || $linkdin!='') {
@@ -187,11 +217,41 @@ if (!function_exists('appointment_blue_header_default_layout')) :
                 </div>
 
                 <?php
+                $appointment_options = appointment_theme_setup_data();
+                $appointment_header_setting = wp_parse_args(get_option('appointment_options', array()), $appointment_options);
+                if ($appointment_header_setting['appointment_search_enable'] == 0 || $appointment_header_setting['appointment_search_enable'] == '') {
+                $appointment_blue_search_icon = '';
+                $appointment_blue_search_icon.= '<div class="search-bar">
+                    <div class="search-box-outer">
+                      <div class="dropdown">
+                        <a href="#" title="'.esc_attr__('Search','appointment-blue').'" class="menu-item search-icon dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                         <i class="fa fa-search"></i>
+                         <span class="sub-arrow"></span>
+                        </a>
+                        <ul class="dropdown-menu pull-right search-panel" role="group" aria-hidden="true" aria-expanded="false">
+                          <li class="dropdown-item panel-outer">
+                            <div class="form-container">
+                                <form method="get" autocomplete="off" class="search-form" action="' . esc_url(home_url('/')) . '">
+                                    <label>
+                                      <input type="search" class="menu-item search-field" placeholder="'.esc_attr__('Search …','appointment-blue').'" value="" name="s">
+                                    </label>
+                                    <input type="submit" class="menu-item search-submit header-toggle-search" value="'.esc_attr__('Search','appointment-blue').'">
+                                </form>                   
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>';
+                }
                 $facebook = $appointment_blue_header_setting['social_media_facebook_link'];
                 $twitter = $appointment_blue_header_setting['social_media_twitter_link'];
                 $linkdin = $appointment_blue_header_setting['social_media_linkedin_link'];
 
                 $social = '<ul id="%1$s" class="%2$s">%3$s';
+                if ($appointment_header_setting['appointment_search_enable'] == 0 || $appointment_header_setting['appointment_search_enable'] == '') {
+                    $social.= '<li><div class="ap header-module">' . $appointment_blue_search_icon . '</li>';
+                    }
                 if ($appointment_blue_header_setting['header_social_media_enabled'] == 0) {
 
                     if($facebook !='' || $twitter!='' || $linkdin!='') {
