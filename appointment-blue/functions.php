@@ -24,8 +24,11 @@ function appointment_blue_theme_css() {
     $current_options = wp_parse_args(  get_option( 'appointment_options', array() ), $appointment_blue_options );
 
     wp_enqueue_style('appointment-blue-parent-style', APPOINTMENT_BLUE_PARENT_TEMPLATE_DIR_URI . '/style.css');
+    wp_style_add_data('appointment-blue-parent-style', 'rtl', 'replace');
     wp_enqueue_style('bootstrap-style', APPOINTMENT_BLUE_PARENT_TEMPLATE_DIR_URI . '/css/bootstrap.css');
+    wp_style_add_data('bootstrap-style', 'rtl', 'replace');
     wp_enqueue_style('appointment-blue-theme-menu', APPOINTMENT_BLUE_PARENT_TEMPLATE_DIR_URI . '/css/theme-menu.css');
+    wp_style_add_data('appointment-blue-theme-menu', 'rtl', 'replace');
     if($current_options['link_color_enable'] == true) {
         appointment_custom_light();
     }
@@ -34,6 +37,7 @@ function appointment_blue_theme_css() {
     }
     wp_enqueue_style('appointment-blue-element-style', APPOINTMENT_BLUE_PARENT_TEMPLATE_DIR_URI . '/css/element.css');
     wp_enqueue_style('appointment-blue-media-responsive', APPOINTMENT_BLUE_PARENT_TEMPLATE_DIR_URI . '/css/media-responsive.css');
+    wp_style_add_data('appointment-blue-media-responsive', 'rtl', 'replace');
     wp_dequeue_style('appointment-default', APPOINTMENT_BLUE_PARENT_TEMPLATE_DIR_URI . '/css/default.css');
 }
 

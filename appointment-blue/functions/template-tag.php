@@ -50,15 +50,12 @@ if (!function_exists('appointment_blue_header_center_layout')) :
                 <?php endif; ?>
             </div>
         </div>
-        <nav class="navbar navbar-default navbar3">
+        <nav class="navbar navbar-default navbar3 navbar-expand-lg">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only"><?php esc_html_e('Toggle navigation', 'appointment-blue'); ?></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+                       <span class="navbar-toggler-icon"></span>
+                     </button>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <?php
@@ -137,8 +134,8 @@ if (!function_exists('appointment_blue_header_center_layout')) :
                             array(
                                 'theme_location' => 'primary',
                                 'container' => '',
-                                'menu_class' => 'nav navbar-nav navbar-left',
-                                'fallback_cb' => 'webriti_fallback_page_menu',
+                                'menu_class' => 'nav rrr navbar-nav me-auto',
+                                'fallback_cb' => 'appointment_fallback_page_menu',
                                 'items_wrap' => $social,
                                 'walker' => new webriti_nav_walker()
                             )
@@ -157,7 +154,7 @@ if (!function_exists('appointment_blue_header_default_layout')) :
     function appointment_blue_header_default_layout() {
         $appointment_blue_header_setting = wp_parse_args(get_option('appointment_options', array()), appointment_theme_setup_data());
         ?>
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-default navbar-expand-lg">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -208,12 +205,9 @@ if (!function_exists('appointment_blue_header_default_layout')) :
                             <p class="site-description"><?php echo $appointment_blue_description; ?></p>
                         <?php endif; ?>
                     </div>
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only"><?php esc_html_e('Toggle navigation', 'appointment-blue'); ?></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+                       <span class="navbar-toggler-icon"></span>
+                     </button>
                 </div>
 
                 <?php
@@ -290,7 +284,7 @@ if (!function_exists('appointment_blue_header_default_layout')) :
                     wp_nav_menu(array(
                         'theme_location' => 'primary',
                         'container' => '',
-                        'menu_class' => 'nav navbar-nav navbar-right',
+                        'menu_class' => 'nav navbar-nav navbar-right ms-auto',
                         'fallback_cb' => 'appointment_fallback_page_menu',
                         'items_wrap' => $social,
                         'walker' => new appointment_nav_walker()

@@ -26,16 +26,16 @@ Text Domain: appointment-blue
     background-color: #21202e;
     padding: 0 0;
 }
-.navbar3 .cart-header {border-left: 1px solid #ffffff;}
+.navbar3 .cart-header {border-right: 1px solid #ffffff;}
 .navbar3 .header-module {
-  padding: 2rem 0rem 2rem 1rem;
+  padding: 2rem 1rem 2rem 0rem;
 }
 .navbar3 .search-box-outer a {
     color: #ffffff;
 }
 .navbar3 .cart-header > a.cart-icon  {color: #ffffff;}
 .navbar-header.index3 {text-align: center;background-color: #fff;float: none;padding: 20px 0 20px;}
-.navbar-header.index3 .navbar-brand {display: inline-block;float: none;margin-right: 0;}
+.navbar-header.index3 .navbar-brand {display: inline-block;float: none;margin-left: 0;}
 .top-header-widget {
     padding: 10px 0 10px;
 }
@@ -46,7 +46,7 @@ Text Domain: appointment-blue
 .header-contact-info i {
     font-size: 15px;
     line-height: 20px;
-    padding-right: 7px;
+    padding-left: 7px;
     vertical-align: bottom;
 }
 .top-header-widget li, .top-contact-detail-section li {
@@ -80,12 +80,12 @@ Text Domain: appointment-blue
 }
 @media (max-width: 992px) {
   .navbar3 .dropdown .dropdown-toggle .sub-arrow::after
-    {float: right;}
+    {float: left;}
   .navbar3 .dropdown .dropdown-toggle .sub-arrow::after {
   content: '\f107';
   font-family: "FontAwesome";
   position: relative;
-  float: right;
+  float: left;
   color: #ffffff;
   transition: all 0.3s ease-in-out 0s;
   }
@@ -104,9 +104,9 @@ Text Domain: appointment-blue
     content: '';
   position: absolute;
   border-top: .3em solid;
-  border-right: .3em solid transparent;
   border-left: .3em solid transparent;
-  left: 50%;
+  border-right: .3em solid transparent;
+  right: 50%;
   top: 0;
   color: #FFFFFF;
   }
@@ -114,7 +114,7 @@ Text Domain: appointment-blue
 }
 /* Menu Section css  Navbar3 ---------------------------------------------------------------------------------------------------- */
 
-.navbar3 .navbar-inverse .navbar-toggle { background: none repeat scroll 0 0 #66d1b9; border-color: none; }
+.navbar3 .navbar-inverse .navbar-toggle { background: none repeat scroll 100% 0 #66d1b9; border-color: none; }
 .navbar3 .navbar-inverse .navbar-toggle:hover,
 .navbar-inverse .navbar-toggle:focus { background-color: #66d1b9; }
 .navbar-default.navbar3 .navbar-brand { color: #1b1b1b; }
@@ -131,12 +131,12 @@ Text Domain: appointment-blue
   }
 }
 @media (min-width :992px) {
-  .navbar3 .navbar-collapse { padding-right : 0; padding-left:0; }
+  .navbar3 .navbar-collapse { padding-left : 0; padding-right:0; }
 }
 /*Header Contact Info---------------------------------------------------------------------------------------------------*/
-.header-contact-info { margin: 0px !important; display: block; float: left; }
-.header-contact-info li { margin-right: 0px; letter-spacing: 0.8px; }
-.header-contact-info i { font-size: 15px; line-height: 20px; padding-right: 7px; vertical-align: bottom; }
+.header-contact-info { margin: 0px !important; display: block; float: right; }
+.header-contact-info li { margin-left: 0px; letter-spacing: 0.8px; }
+.header-contact-info i { font-size: 15px; line-height: 20px; padding-left: 7px; vertical-align: bottom; }
 .header-contact-info li a:before { display: none; }
 
 @media only screen and (max-width: 992px) and (min-width: 200px) {
@@ -144,7 +144,7 @@ Text Domain: appointment-blue
     margin: 0px 0 0px;
   }
   .navbar3 .header-module {
-    padding: 1rem 0rem 1rem 2rem;
+    padding: 1rem 2rem 1rem 0rem;
   }
 }
 
@@ -165,7 +165,7 @@ Text Domain: appointment-blue
     -webkit-transition: all 0.25s ease-in;
     -moz-transition: all 0.25s ease-in;
     transition: all 0.25s ease-in;}
-.service-section2 .service-icon{position: relative;text-align: left;margin: 0 0 16px;float: none;}
+.service-section2 .service-icon{position: relative;text-align: right;margin: 0 0 16px;float: none;}
 .service-section2 i.fa {font-size: 36px;text-align: center;}
 .service-section2 .media-body h3{display: block; margin: 0 0 19px;padding: 0;}
 .service-section2 .media-body p{display: block;overflow: hidden;margin: 0px;}
@@ -179,7 +179,7 @@ Text Domain: appointment-blue
 .service-section2 .service-area::before {
     content: "";
     position: absolute;
-    left: 0;
+    right: 0;
     top: 0;
     width: 2px;
     height: 100%;
@@ -239,7 +239,7 @@ Text Domain: appointment-blue
     font-size: 14px;
     font-weight: bold;
     height: auto;
-    left: 5px;
+    right: 5px;
     line-height: normal;
     padding: 15px 23px 14px;
     text-decoration: none;
