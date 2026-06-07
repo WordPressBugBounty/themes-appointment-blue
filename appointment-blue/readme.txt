@@ -42,6 +42,8 @@ Appointment Blue WordPress Theme is distributed under the terms of the GNU GPL
 
 == Changelog ==
 
+@version 1.5
+1. fixed minor issues.
 @version 1.4
 1. Updated bootstrap 5.3.6.
 2. Added rtl language support.
